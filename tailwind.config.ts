@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -89,6 +88,9 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			backgroundSize: {
+				'size-200': '200% 200%',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -125,6 +127,14 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'gradient': {
+					'0%, 100%': {
+						'background-position': '0% 50%'
+					},
+					'50%': {
+						'background-position': '100% 50%'
+					},
 				}
 			},
 			animation: {
@@ -134,7 +144,8 @@ export default {
 				'fade-in-right': 'fade-in-right 0.7s ease-out forwards',
 				'fade-in-left': 'fade-in-left 0.7s ease-out forwards',
 				'pulse-slow': 'pulse-slow 3s infinite',
-				'float': 'float 6s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'gradient': 'gradient 15s ease infinite',
 			},
 			backgroundImage: {
 				'hero-gradient': 'linear-gradient(90deg, hsla(203, 89%, 83%, 1) 0%, hsla(210, 88%, 68%, 1) 100%)',
