@@ -2,13 +2,11 @@
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import HumanoidSection from "@/components/HumanoidSection";
+import ITServicesSection from "@/components/ITServicesSection";
 import SpecsSection from "@/components/SpecsSection";
-import DetailsSection from "@/components/DetailsSection";
 import ImageShowcaseSection from "@/components/ImageShowcaseSection";
-import Features from "@/components/Features";
 import Testimonials from "@/components/Testimonials";
-import Newsletter from "@/components/Newsletter";
+import ContactSection from "@/components/ContactSection";
 import MadeByHumans from "@/components/MadeByHumans";
 import Footer from "@/components/Footer";
 
@@ -61,15 +59,13 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <main className="space-y-4 sm:space-y-8"> {/* Reduced space on mobile */}
+      <main className="space-y-4 sm:space-y-8">
         <Hero />
-        <HumanoidSection />
+        <ITServicesSection />
         <SpecsSection />
-        <DetailsSection />
         <ImageShowcaseSection />
-        <Features />
         <Testimonials />
-        <Newsletter />
+        <ContactSection />
         <MadeByHumans />
       </main>
       <Footer />

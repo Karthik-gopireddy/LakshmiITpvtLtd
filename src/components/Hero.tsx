@@ -2,12 +2,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
-import LottieAnimation from "./LottieAnimation";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
-  const [lottieData, setLottieData] = useState<any>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,13 +18,6 @@ const Hero = () => {
     window.addEventListener('resize', checkMobile);
     
     return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    fetch('/loop-header.lottie')
-      .then(response => response.json())
-      .then(data => setLottieData(data))
-      .catch(error => console.error("Error loading Lottie animation:", error));
   }, []);
 
   useEffect(() => {
@@ -106,21 +97,21 @@ const Hero = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
-              <span>Purpose</span>
+              <span>IT Solutions</span>
             </div>
             
             <h1 
               className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
               style={{ animationDelay: "0.3s" }}
             >
-              Atlas: Where Code<br className="hidden sm:inline" />Meets Motion
+              TechFlow: Where Innovation<br className="hidden sm:inline" />Meets Excellence
             </h1>
             
             <p 
               style={{ animationDelay: "0.5s" }} 
               className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
             >
-              The humanoid companion that learns and adapts alongside you.
+              Empowering businesses with cutting-edge IT solutions, cloud services, and digital transformation strategies.
             </p>
             
             <div 
@@ -128,7 +119,7 @@ const Hero = () => {
               style={{ animationDelay: "0.7s" }}
             >
               <a 
-                href="#get-access" 
+                href="#contact" 
                 className="flex items-center justify-center group w-full sm:w-auto text-center" 
                 style={{
                   backgroundColor: '#FE5C02',
@@ -138,41 +129,28 @@ const Hero = () => {
                   cursor: 'pointer',
                   fontSize: '14px',
                   lineHeight: '20px',
-                  padding: '16px 24px', // Slightly reduced padding for mobile
+                  padding: '16px 24px',
                   border: '1px solid white',
                 }}
               >
-                Request Access
+                Get Started
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
           
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
-            {lottieData ? (
-              <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-                <LottieAnimation 
-                  animationPath={lottieData} 
-                  className="w-full h-auto max-w-lg mx-auto"
-                  loop={true}
-                  autoplay={true}
-                />
-              </div>
-            ) : (
-              <>
-              <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
-              <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
-                <img 
-                  ref={imageRef} 
-                  src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
-                  alt="Atlas Robot" 
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
-                  style={{ transformStyle: 'preserve-3d' }} 
-                />
-                <div className="absolute inset-0" style={{ backgroundImage: 'url("/hero-image.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
-              </div>
-              </>
-            )}
+            <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
+            <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+              <img 
+                ref={imageRef} 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                alt="Modern IT Infrastructure" 
+                className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
+                style={{ transformStyle: 'preserve-3d' }} 
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+            </div>
           </div>
         </div>
       </div>
