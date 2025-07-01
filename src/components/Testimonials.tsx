@@ -41,25 +41,27 @@ const TestimonialCard = ({
   role,
   backgroundImage = "/background-section1.png"
 }: TestimonialProps) => {
-  return <div className="bg-cover bg-center rounded-lg p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden" style={{
-    backgroundImage: `url('${backgroundImage}')`
-  }}>
-      <div className="absolute top-0 right-0 w-24 h-24 bg-white z-10"></div>
-      
-      <div className="relative z-0">
-        <p className="text-xl mb-8 font-medium leading-relaxed pr-20">{`"${content}"`}</p>
-        <div>
-          <h4 className="font-semibold text-xl">{author}</h4>
-          <p className="text-white/80">{role}</p>
-        </div>
+  return (
+    <div className="bg-white rounded-2xl p-8 h-full flex flex-col justify-between shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+      <div className="flex-1">
+        <div className="text-pulse-500 text-4xl mb-4">"</div>
+        <p className="text-gray-700 text-lg mb-6 font-medium leading-relaxed italic">
+          {content}
+        </p>
       </div>
-    </div>;
+      <div className="border-t border-gray-100 pt-6">
+        <h4 className="font-bold text-lg text-gray-900">{author}</h4>
+        <p className="text-pulse-600 font-medium">{role}</p>
+      </div>
+    </div>
+  );
 };
 
 const Testimonials = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  return <section className="py-12 bg-white relative" id="testimonials" ref={sectionRef}>
+  return (
+    <section className="py-16 bg-gray-50 relative" id="testimonials" ref={sectionRef}>
       <div className="section-container opacity-0 animate-on-scroll">
         <div className="flex items-center gap-4 mb-6">
           <div className="pulse-chip">
@@ -71,10 +73,20 @@ const Testimonials = () => {
         <h2 className="text-5xl font-display font-bold mb-12 text-left">What our clients say</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => <TestimonialCard key={index} content={testimonial.content} author={testimonial.author} role={testimonial.role} gradient={testimonial.gradient} backgroundImage={testimonial.backgroundImage} />)}
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard 
+              key={index} 
+              content={testimonial.content} 
+              author={testimonial.author} 
+              role={testimonial.role} 
+              gradient={testimonial.gradient} 
+              backgroundImage={testimonial.backgroundImage} 
+            />
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default Testimonials;
