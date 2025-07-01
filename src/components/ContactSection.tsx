@@ -189,7 +189,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 group-hover:text-pulse-600 transition-colors duration-300">Email</h4>
-                      <p className="text-gray-600 font-medium">hello@techflow.com</p>
+                      <p className="text-gray-600 font-medium">hello@LakshmiIT.com</p>
                       <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                     </div>
                   </div>

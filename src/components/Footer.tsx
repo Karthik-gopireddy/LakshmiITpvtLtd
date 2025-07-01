@@ -13,8 +13,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
-              <img src="/logo.svg" alt="TechFlow IT Solutions" className="h-8 w-auto mr-3 invert" />
-              <span className="text-xl font-bold">TechFlow</span>
+              {/* <img src="/lakshiitlogo.png" alt="LakshmiIT IT Solutions" className="h-8 w-auto mr-3 invert" /> */}
+              <span className="text-xl font-bold">Lakshmi info tech pvt.Ltd</span>
             </div>
             <p className="text-pulse-200 mb-6 leading-relaxed">
               Leading IT solutions provider offering cloud services, cybersecurity, 
@@ -23,7 +23,7 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="text-pulse-300 hover:text-white transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/lakshmi-information-technology-private-limited" className="text-pulse-300 hover:text-white transition-colors duration-300">
                 <Linkedin size={20} />
               </a>
               <a href="#" className="text-pulse-300 hover:text-white transition-colors duration-300">
@@ -67,22 +67,22 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-pulse-400 mt-1 flex-shrink-0" />
                 <div className="text-pulse-200">
-                  <p>123 Tech Street</p>
-                  <p>San Francisco, CA 94102</p>
+                  <p>at 1-11-251/11, RKP Mansion,</p>
+                  <p>Begumpet, Hyderabad 500016,</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-pulse-400 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-pulse-200 hover:text-white transition-colors duration-300">
-                  +1 (234) 567-8900
+                <a href="tel:	+91 7897893299" className="text-pulse-200 hover:text-white transition-colors duration-300">
+                  	+91 7897893299
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-pulse-400 flex-shrink-0" />
-                <a href="mailto:info@techflow.com" className="text-pulse-200 hover:text-white transition-colors duration-300">
-                  info@techflow.com
+                <a href="mailto:info@LakshmiIT.com" className="text-pulse-200 hover:text-white transition-colors duration-300">
+                  info@LakshmiIT.com
                 </a>
               </div>
             </div>
@@ -105,12 +105,12 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-pulse-300 text-sm">
-              © 2024 TechFlow IT Solutions. All rights reserved.
+              © 2025 Lakshmi info tech pvt.Ltd . All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-pulse-300 hover:text-white transition-colors duration-300">Terms of Service</a>
               <a href="#" className="text-pulse-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
-              <a href="#" className="text-pulse-300 hover:text-white transition-colors duration-300">Cookie Policy</a>
+
             </div>
           </div>
         </div>

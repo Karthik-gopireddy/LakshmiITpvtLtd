@@ -10,13 +10,13 @@ interface TestimonialProps {
 }
 
 const testimonials: TestimonialProps[] = [{
-  content: "TechFlow transformed our entire IT infrastructure, migrating us to the cloud and improving our system performance by 40%. Their expertise in digital transformation is unmatched.",
+  content: "LakshmiIT transformed our entire IT infrastructure, migrating us to the cloud and improving our system performance by 40%. Their expertise in digital transformation is unmatched.",
   author: "Sarah Chen",
   role: "CTO, InnovateTech Solutions",
   gradient: "from-blue-700 via-indigo-800 to-purple-900",
   backgroundImage: "/background-section1.png"
 }, {
-  content: "The cybersecurity solutions implemented by TechFlow have given us peace of mind. Zero security incidents in 18 months and comprehensive compliance management.",
+  content: "The cybersecurity solutions implemented by LakshmiIT have given us peace of mind. Zero security incidents in 18 months and comprehensive compliance management.",
   author: "Michael Rodriguez",
   role: "IT Director, SecureData Corp",
   gradient: "from-indigo-900 via-purple-800 to-orange-500",
@@ -28,7 +28,7 @@ const testimonials: TestimonialProps[] = [{
   gradient: "from-purple-800 via-pink-700 to-red-500",
   backgroundImage: "/background-section3.png"
 }, {
-  content: "As a growing business, TechFlow's scalable IT solutions have been game-changing. Their 24/7 support ensures we never miss a beat.",
+  content: "As a growing business, LakshmiIT's scalable IT solutions have been game-changing. Their 24/7 support ensures we never miss a beat.",
   author: "Jason Lee",
   role: "CEO, GrowthTech Enterprises",
   gradient: "from-orange-600 via-red-500 to-purple-600",

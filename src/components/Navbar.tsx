@@ -43,7 +43,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
           <img 
             src="/logo.svg" 
-            alt="TechFlow IT Solutions Logo" 
+            alt="LakshmiIT IT Solutions Logo" 
             className="h-7 sm:h-8" 
           />
         </Link>
@@ -94,10 +94,10 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
+        "fixed inset-0 z-40 w-[80%] bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
-        <nav className="flex flex-col space-y-8 items-center mt-8">
+        <nav className="flex flex-col space-y-8 items-center mt-5">
           <Link 
             to="/" 
             className={cn(

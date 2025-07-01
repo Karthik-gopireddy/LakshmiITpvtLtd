@@ -82,7 +82,7 @@ const SpecsSection = () => {
         <div className="max-w-5xl pl-4 sm:pl-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-8 sm:mb-12 animate-slide-up">
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-pulse-600 to-gray-900 bg-size-200 animate-gradient">
-              TechFlow partners with your team to accelerate digital transformation. By modernizing infrastructure, enhancing security, and implementing cutting-edge solutions, we help businesses focus on what they do best: innovate, grow, and succeed.
+              LakshmiIT partners with your team to accelerate digital transformation. By modernizing infrastructure, enhancing security, and implementing cutting-edge solutions, we help businesses focus on what they do best: innovate, grow, and succeed.
             </span>
           </h2>
 
