@@ -55,7 +55,7 @@ const Footer = () => {
               <li><Link to="/about" className="text-pulse-200 hover:text-white transition-colors duration-300">About Us</Link></li>
               <li><Link to="/careers" className="text-pulse-200 hover:text-white transition-colors duration-300">Careers</Link></li>
               <li><Link to="/about" className="text-pulse-200 hover:text-white transition-colors duration-300">Testimonials</Link></li>
-              <li><a href="#" className="text-pulse-200 hover:text-white transition-colors duration-300">Blog</a></li>
+              {/* <li><a href="#" className="text-pulse-200 hover:text-white transition-colors duration-300">Blog</a></li> */}
               <li><a href="#" className="text-pulse-200 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
             </ul>
           </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-pulse-400 flex-shrink-0" />
-                <a href="tel:	+91 7897893299" className="text-pulse-200 hover:text-white transition-colors duration-300">
+                <a href="tel:	+917897893299" className="text-pulse-200 hover:text-white transition-colors duration-300">
                   	+91 7897893299
                 </a>
               </div>

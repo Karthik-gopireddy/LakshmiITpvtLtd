@@ -156,12 +156,12 @@ const ImageShowcaseSection = () => {
         </div>
 
         {/* Interactive statistics */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto">
+        {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 max-w-2xl mx-auto">
           {[
             { number: "99.9%", label: "Uptime" },
             { number: "24/7", label: "Support" },
-            { number: "500+", label: "Clients" },
-            { number: "10+", label: "Years" }
+            { number: "50+", label: "Clients" },
+            { number: "2+", label: "Years" }
           ].map((stat, index) => (
             <div 
               key={index}
@@ -176,7 +176,7 @@ const ImageShowcaseSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

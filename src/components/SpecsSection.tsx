@@ -7,8 +7,8 @@ const SpecsSection = () => {
   const [activeFeature, setActiveFeature] = useState(0);
 
   const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients", color: "pulse-500" },
-    { icon: Award, value: "10+", label: "Years Experience", color: "pulse-600" },
+    { icon: Users, value: "50+", label: "Happy Clients", color: "pulse-500" },
+    { icon: Award, value: "2+", label: "Years Experience", color: "pulse-600" },
     { icon: TrendingUp, value: "99.9%", label: "Success Rate", color: "pulse-500" },
     { icon: Shield, value: "24/7", label: "Support Available", color: "pulse-600" }
   ];
@@ -46,7 +46,7 @@ const SpecsSection = () => {
         <div className="flex items-center gap-4 mb-8 sm:mb-16 animate-fade-in">
           <div className="flex items-center gap-4">
             <div className="pulse-chip hover-lift">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">3</span>
+              {/* <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">3</span> */}
               <span>About</span>
             </div>
           </div>
@@ -80,7 +80,7 @@ const SpecsSection = () => {
         
         {/* Main content with interactive text */}
         <div className="max-w-5xl pl-4 sm:pl-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-8 sm:mb-12 animate-slide-up">
+          <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl font-display leading-tight mb-8 sm:mb-12 animate-slide-up">
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-pulse-600 to-gray-900 bg-size-200 animate-gradient">
               LakshmiIT partners with your team to accelerate digital transformation. By modernizing infrastructure, enhancing security, and implementing cutting-edge solutions, we help businesses focus on what they do best: innovate, grow, and succeed.
             </span>

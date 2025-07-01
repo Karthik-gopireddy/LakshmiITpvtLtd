@@ -26,7 +26,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-pulse-50/30 relative" id="contact">
+    <section className="pb-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-pulse-50/30 relative" id="contact">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-pulse-100/50 rounded-full blur-3xl opacity-70"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-pulse-50/80 rounded-full blur-3xl opacity-60"></div>
@@ -34,15 +34,22 @@ const ContactSection = () => {
       <div className="section-container relative z-10 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 animate-fade-in">
-            <div className="pulse-chip mx-auto mb-6 hover-lift">
+          <div className="text-start mb-12 animate-fade-in">
+              <div className="flex items-center gap-4 mb-8 sm:mb-16 animate-fade-in">
+          <div className="flex items-center gap-4">
+            <div className="pulse-chip hover-lift">
+              {/* <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span> */}
               <span>Get in Touch</span>
             </div>
+          </div>
+          <div className="flex-1 h-[1px] bg-gradient-to-r from-pulse-200 to-transparent"></div>
+        </div>
+            
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Transform Your <br className="hidden sm:inline" />
-              <span className="text-pulse-500 animate-pulse-slow">IT Infrastructure?</span>
+              Ready to Transform Your 
+              <span className="text-pulse-500 animate-pulse-slow"> IT Infrastructure?</span>
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-start sm:text-lg text-gray-600  mx-auto">
               Let's discuss how our IT solutions can drive your business forward. Get in touch for a free consultation.
             </p>
           </div>
@@ -174,8 +181,8 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 group-hover:text-pulse-600 transition-colors duration-300">Phone</h4>
-                      <p className="text-gray-600 font-medium">+1 (555) 123-4567</p>
-                      <p className="text-sm text-gray-500">Mon-Fri 9am-6pm EST</p>
+                      <p className="text-gray-600 font-medium">+91 7897893299</p>
+                      <p className="text-sm text-gray-500">Mon-Sat 10am-7pm EST</p>
                     </div>
                   </div>
                 </div>
@@ -189,7 +196,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 group-hover:text-pulse-600 transition-colors duration-300">Email</h4>
-                      <p className="text-gray-600 font-medium">hello@LakshmiIT.com</p>
+                      <p className="text-gray-600 font-medium">info@LakshmiIT.com</p>
                       <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                     </div>
                   </div>
@@ -204,7 +211,7 @@ const ContactSection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 group-hover:text-pulse-600 transition-colors duration-300">Office</h4>
-                      <p className="text-gray-600 font-medium">123 Tech Street<br />San Francisco, CA 94105</p>
+                      <p className="text-gray-600 font-medium">at 1-11-251/11, RKP Mansion,<br />Begumpet, Hyderabad 500016</p>
                     </div>
                   </div>
                 </div>
@@ -217,7 +224,7 @@ const ContactSection = () => {
                   <div className="text-sm text-gray-600">Support</div>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover-lift">
-                  <div className="text-2xl font-bold text-pulse-600">500+</div>
+                  <div className="text-2xl font-bold text-pulse-600">50+</div>
                   <div className="text-sm text-gray-600">Clients</div>
                 </div>
               </div>

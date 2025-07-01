@@ -62,13 +62,15 @@ const Testimonials = () => {
 
   return (
     <section className="py-16 bg-gray-50 relative" id="testimonials" ref={sectionRef}>
-      <div className="section-container opacity-0 animate-on-scroll">
+      <div className="section-container animate-on-scroll">
         <div className="flex items-center gap-4 mb-6">
           <div className="pulse-chip">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
+            {/* <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span> */}
             <span>Testimonials</span>
           </div>
+          <div className="flex-1 h-[1px] bg-gradient-to-r from-pulse-200 to-transparent"></div>
         </div>
+         
         
         <h2 className="text-5xl font-display font-bold mb-12 text-left">What our clients say</h2>
         

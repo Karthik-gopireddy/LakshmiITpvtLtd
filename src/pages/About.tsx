@@ -20,20 +20,20 @@ const About = () => {
                 We are a leading IT solutions provider dedicated to transforming businesses through innovative technology. 
                 Our team of experts specializes in cloud solutions, cybersecurity, custom development, and digital transformation.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pulse-500 mb-2">10+</div>
                   <div className="text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pulse-500 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-pulse-500 mb-2">50+</div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pulse-500 mb-2">24/7</div>
                   <div className="text-gray-600">Support Available</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

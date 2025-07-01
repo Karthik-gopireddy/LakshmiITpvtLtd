@@ -57,7 +57,7 @@ const ITServicesSection = () => {
         <div className="flex items-center gap-4 mb-8 sm:mb-16 animate-fade-in">
           <div className="flex items-center gap-4">
             <div className="pulse-chip hover-lift">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span>
+              {/* <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span> */}
               <span>Services</span>
             </div>
           </div>
@@ -108,13 +108,13 @@ const ITServicesSection = () => {
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-12 animate-fade-in-scale">
+        {/* <div className="text-center mt-12 animate-fade-in-scale">
           <p className="text-gray-600 mb-6">Ready to transform your IT infrastructure?</p>
           <a href="#contact" className="button-primary inline-flex items-center">
             Get Started Today
             <span className="ml-2">→</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
