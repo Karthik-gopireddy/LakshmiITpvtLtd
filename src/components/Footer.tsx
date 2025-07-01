@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -38,12 +39,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-pulse-200 hover:text-white transition-colors duration-300">Cloud Solutions</a></li>
-              <li><a href="#services" className="text-pulse-200 hover:text-white transition-colors duration-300">Cybersecurity</a></li>
-              <li><a href="#services" className="text-pulse-200 hover:text-white transition-colors duration-300">Custom Development</a></li>
-              <li><a href="#services" className="text-pulse-200 hover:text-white transition-colors duration-300">IT Consulting</a></li>
-              <li><a href="#services" className="text-pulse-200 hover:text-white transition-colors duration-300">Digital Transformation</a></li>
-              <li><a href="#services" className="text-pulse-200 hover:text-white transition-colors duration-300">Managed Services</a></li>
+              <li><Link to="/services" className="text-pulse-200 hover:text-white transition-colors duration-300">Cloud Solutions</Link></li>
+              <li><Link to="/services" className="text-pulse-200 hover:text-white transition-colors duration-300">Cybersecurity</Link></li>
+              <li><Link to="/services" className="text-pulse-200 hover:text-white transition-colors duration-300">Custom Development</Link></li>
+              <li><Link to="/services" className="text-pulse-200 hover:text-white transition-colors duration-300">IT Consulting</Link></li>
+              <li><Link to="/services" className="text-pulse-200 hover:text-white transition-colors duration-300">Digital Transformation</Link></li>
+              <li><Link to="/services" className="text-pulse-200 hover:text-white transition-colors duration-300">Managed Services</Link></li>
             </ul>
           </div>
 
@@ -51,10 +52,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-pulse-200 hover:text-white transition-colors duration-300">About Us</a></li>
-              <li><a href="#showcase" className="text-pulse-200 hover:text-white transition-colors duration-300">Our Work</a></li>
-              <li><a href="#testimonials" className="text-pulse-200 hover:text-white transition-colors duration-300">Testimonials</a></li>
-              <li><a href="#" className="text-pulse-200 hover:text-white transition-colors duration-300">Careers</a></li>
+              <li><Link to="/about" className="text-pulse-200 hover:text-white transition-colors duration-300">About Us</Link></li>
+              <li><Link to="/careers" className="text-pulse-200 hover:text-white transition-colors duration-300">Careers</Link></li>
+              <li><Link to="/about" className="text-pulse-200 hover:text-white transition-colors duration-300">Testimonials</Link></li>
               <li><a href="#" className="text-pulse-200 hover:text-white transition-colors duration-300">Blog</a></li>
               <li><a href="#" className="text-pulse-200 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
             </ul>
@@ -89,12 +89,12 @@ const Footer = () => {
 
             {/* CTA Button */}
             <div className="mt-6">
-              <a 
-                href="#contact" 
+              <Link 
+                to="/contact" 
                 className="inline-block bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
         </div>

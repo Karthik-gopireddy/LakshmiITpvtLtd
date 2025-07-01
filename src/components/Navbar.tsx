@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,22 +20,15 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Prevent background scrolling when menu is open
     document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-    
-    // Close mobile menu if open
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = '';
-    }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = '';
   };
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header
@@ -45,40 +40,49 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a 
-          href="#" 
-          className="flex items-center space-x-2"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToTop();
-          }}
-          aria-label="TechFlow IT Solutions"
-        >
+        <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
           <img 
             src="/logo.svg" 
             alt="TechFlow IT Solutions Logo" 
             className="h-7 sm:h-8" 
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a 
-            href="#" 
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-            }}
+          <Link 
+            to="/" 
+            className={cn("nav-link", isActive("/") && "text-pulse-600 font-semibold")}
           >
             Home
-          </a>
-          <a href="#services" className="nav-link">Services</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          </Link>
+          <Link 
+            to="/services" 
+            className={cn("nav-link", isActive("/services") && "text-pulse-600 font-semibold")}
+          >
+            Services
+          </Link>
+          <Link 
+            to="/about" 
+            className={cn("nav-link", isActive("/about") && "text-pulse-600 font-semibold")}
+          >
+            About
+          </Link>
+          <Link 
+            to="/contact" 
+            className={cn("nav-link", isActive("/contact") && "text-pulse-600 font-semibold")}
+          >
+            Contact
+          </Link>
+          <Link 
+            to="/careers" 
+            className={cn("nav-link", isActive("/careers") && "text-pulse-600 font-semibold")}
+          >
+            Careers
+          </Link>
         </nav>
 
-        {/* Mobile menu button - increased touch target */}
+        {/* Mobile menu button */}
         <button 
           className="md:hidden text-gray-700 p-3 focus:outline-none" 
           onClick={toggleMenu}
@@ -88,54 +92,62 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation - improved for better touch experience */}
+      {/* Mobile Navigation */}
       <div className={cn(
         "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-8 items-center mt-8">
-          <a 
-            href="#" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+          <Link 
+            to="/" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              isActive("/") && "bg-pulse-50 text-pulse-600"
+            )}
+            onClick={closeMenu}
           >
             Home
-          </a>
-          <a 
-            href="#services" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+          </Link>
+          <Link 
+            to="/services" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              isActive("/services") && "bg-pulse-50 text-pulse-600"
+            )}
+            onClick={closeMenu}
           >
             Services
-          </a>
-          <a 
-            href="#about" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+          </Link>
+          <Link 
+            to="/about" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              isActive("/about") && "bg-pulse-50 text-pulse-600"
+            )}
+            onClick={closeMenu}
           >
             About
-          </a>
-          <a 
-            href="#contact" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
+          </Link>
+          <Link 
+            to="/contact" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              isActive("/contact") && "bg-pulse-50 text-pulse-600"
+            )}
+            onClick={closeMenu}
           >
             Contact
-          </a>
+          </Link>
+          <Link 
+            to="/careers" 
+            className={cn(
+              "text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100",
+              isActive("/careers") && "bg-pulse-50 text-pulse-600"
+            )}
+            onClick={closeMenu}
+          >
+            Careers
+          </Link>
         </nav>
       </div>
     </header>
